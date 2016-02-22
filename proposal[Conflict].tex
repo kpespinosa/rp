@@ -1,0 +1,200 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{url}
+
+% <http://psl.cs.columbia.edu/phdczar/proposal.html>:
+%
+% The standard departmental thesis proposal format is the following:
+%        30 pages
+%        12 point type
+%        1 inch margins all around = 6.5   inch column
+%        (Total:  30 * 6.5   = 195 page-inches)
+%
+% For letter-size paper: 8.5 in x 11 in
+% Latex Origin is 1''/1'', so measurements are relative to this.
+
+\topmargin      0.0in
+\headheight     0.0in
+\headsep        0.0in
+\oddsidemargin  0.0in
+\evensidemargin 0.0in
+\textheight     9.0in
+\textwidth      6.5in
+
+\title{{\bf Research Proposal} \\
+\it Named recognition and relation extraction in unstructured data using }
+
+\author{ {\bf Kurt Junshean Espinosa}  \\
+Department of Computer Science \\
+University of the Philippines Cebu\\
+{\small kpespinosa@up.edu.ph}
+}
+\date{\today}
+
+\begin{document}
+\pagestyle{plain}
+\pagenumbering{roman}
+\maketitle
+
+
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+\cleardoublepage
+\pagenumbering{arabic}
+
+\section{Overview of the research}
+\label{ch:intro}
+As human activities affect biodiversity, in the same way, biodiversity impacts human life. Therefore, the better we understand biodiversity, the sooner we can lessen the negative impact or increase the positive impact to human life. However, as pointed out by Subramaniam, et. al.\cite{subramaniam2003information}, because of the large amounts of data being generated day by day, it is almost impossible to keep track of all the information  and present them in a way useful to researchers and decision-makers, thus, there is a need for an automated information extraction for timely dissemination of information. \\
+
+This problem has been observed by Beaman, et.al.  in their study\cite{beaman2006herbis} that one of the least tapped sources of biodiversity knowledge is the collection locations, dates, species identification and other information on over a billion natural history specimen labels worldwide and only a very small fraction of these have been digitized and the information added to databases. Clearly, there is a huge gap that needs to be addressed.\\
+
+The aim of this study is to bridge this gap of having so much data on biodiversity available but as it is now has only been scarcely useful. To achieve this goal, novel research on the extraction and normalisation of entities and relations will be done for biodiversity at large scale. Moreover, improvement on current methods of event extraction will be investigated. \\
+
+This study will therefore contribute to the development of a semantic search system to help researchers and the public study scientific documents on biodiversity as explained in \cite{jisc}.\\
+Helpful in formulation of environmental policies, and the discovery of new natural products that can potentially provide medicinal benefits or even cure for cancer (- http://ac.els-cdn.com/S1532046412001712/1-s2.0-S1532046412001712-main.pdf?_tid=79a33c04-40d5-11e5-86cb-00000aab0f6b&acdnat=1439372312_6df62ea4d24a3d4f12a9ef455939c8f9)
+
+
+In general, question-answering and text-mining in biomedical text
+
+\section{Positioning of the research}
+\label{ch:proposal}
+Positioning of the research - demonstrating your current understanding of the research issues being addressed and why they are important.
+
+The interdisciplinary nature of this research requires the close communication among those involved. For example, domain experts in biodiversity, social sciences, linguistics, and computer science have to be able to work together while each of them contributing their expertise. Particularly, vocabularies for biodiversity have to built by domain experts because they will be needed during text mining.\\
+
+spectrum of application
+- named entity recognition, text classification, terminology extraction, relationship extraction and hypothesis generation. (http://bib.oxfordjournals.org/content/6/1/57.abstract)
+
+State of the art of algorithms. 
+review
+- http://cs.nyu.edu/grishman/tarragona.pdf
+- http://www.nactem.ac.uk/dtc/DTC-Ananiadou.pdf
+
+Named entity recognition (NER) and relation extraction are two fundamental tasks in text mining in general. Techniques on both vary from using kinds of techniques here
+review/survey
+- http://www.cfilt.iitb.ac.in/resources/surveys/rahul-ner-survey.pdf
+- in biomedical domain: http://sifaka.cs.uiuc.edu/~sondhi1/survey1.pdf
+
+entity extraction using coreference solver
+- http://ceur-ws.org/Vol-906/paper7.pdf
+use of knowledge base
+- http://www.anthology.aclweb.org/D/D07/D07-1.pdf#page=732
+- http://www.aclweb.org/anthology/W09-3302
+- http://www.alta.asn.au/events/alta2008/proceedings/pdf/ALTA2008_16.pdf
+- http://pages.cs.wisc.edu/~anhai/papers/doctagger-vldb13.pdf
+unsupervised NEE from web
+- http://ac.els-cdn.com/S0004370205000366/1-s2.0-S0004370205000366-main.pdf?_tid=b4f6eeba-4254-11e5-8aa8-00000aacb35e&acdnat=1439536908_360d3eb62171f033ede38728004127cd
+
+disambiguation
+- http://anthology.aclweb.org/D/D07/D07-1.pdf#page=742
+- http://www.cs.utexas.edu/~ml/papers/encyc-eacl-06.pdf
+applications in biomedical
+- http://ac.els-cdn.com/S0933365715000780/1-s2.0-S0933365715000780-main.pdf?_tid=0176b3ec-4255-11e5-8436-00000aab0f02&acdnat=1439537036_0323291c7beae4bdc8351ce1c28431f7
+- http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4331699/
+
+
+
+Relation extraction ..
+The task of relation classification is to predict semantic relations between pairs of nominals and can
+be defined as follows: given a sentence S with the annotated pairs of nominals e1 and e2, we aim
+to identify the relations between e1 and e2 (Hendrickx et al., 2010). 
+review
+- http://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction.pdf
+- http://ceur-ws.org/Vol-779/derive2011_submission_1.pdf
+
+- http://www.aclweb.org/anthology/C14-1220
+The most representative methods for relation classification use supervised paradigm;
+- Zelenko et al., 2003; Bunescu and Mooney, 2005; Zhou et al., 2005; Mintz et al., 2009
+Supervised approaches are further divided into feature-based methods and kernel-based methods.
+- In feature-based methods, a diverse set of strategies
+have been exploited to convert the classification clues (such as sequences and parse trees) into feature
+vectors (Kambhatla, 2004; Suchanek et al., 2006). Feature-based methods suffer from the problem
+of selecting a suitable feature set when converting the structured representation into feature vectors.
+- kernel-based methods
+mentioned above suffer from a lack of sufficient labeled data for training
+- survey (https://hal.archives-ouvertes.fr/halshs-00532988/document)
+– Bootstrapping based approaches result in the discovery of large
+number of patterns and relations. (http://www.cs.cmu.edu/~nbach/papers/A-survey-on-Relation-Extraction-Slides.pdf)
+
+Distributional hypothesis theory (Harris,1954) indicates that words that occur in the same context tend to have similar meanings. Accordingly, it is assumed that the pairs of nominals that occur in similar contexts tend to have similar relations
+
+Feature based
+Methods - Feature set Definition	- Computational Complexity
+>Feature based	methods
+- Required to define a featureset
+to be extracted after
+textual analysis. Good features
+arrived at by experimentation
+- Relatively lower
+>Relatively higher
+
+Concerns: 
+Perform well but difficult to extend to new relationtypes
+for want of labeled data, Difficult to extend to higher order relations, Textual analysis like POS tagging, shallow parsing,
+dependency parsing is a pre-requisite. This stage is
+prone to errors.
+
+>>semi-supervised methods:
+Snowball (Agichtein & Gravano, 2000)
+KnowItAll (Etzioni et al. 2005)
+TextRunner (Banko et al. 2007)
+Methods
+coreference resolution
+
+
+Higher-order relations
+- McDonald et al. 2005
+>Factoring higher-order relations into a set of binary relations
+>Reconstruct higher-order relations
+by finding maximal cliques
+>
+
+
+Proposed approaches for improving IE
+- http://ac.els-cdn.com/S0004370206000762/1-s2.0-S0004370206000762-main.pdf?_tid=fd95c894-4254-11e5-970c-00000aab0f01&acdnat=1439537030_5371ac853d6d20c4989543d707027f30
+In biodiversity, there are unique problems such as..
+Hence, in the design of the algorithms, all these have to be considered. 
+
+
+\section{Research design  methodology}
+\label{ch:proposal}
+
+
+Study on the dataset. 
+
+Research design  methodology - identifying the background information that is necessary to carry out the project and the research techniques that you believe could be adopted.
+
+proposed method:
+- Machine learning is everywhere in today's NLP, but by and large machine learning amounts to numerical optimization of weights for human designed representations and features. The goal of deep learning is to explore how computers can take advantage of data to develop features and representations appropriate for complex interpretation tasks. 
+
+Current research is directed towards investigating deep learning such as the works of []
+- word embeddings Bengio et al., 2001; Bengio
+et al., 2003; Mnih and Hinton, 2007; Collobert
+and Weston, 2008; Turian et al., 2010
+works:
+-RNNs:
+Richard Socher, Christopher D Manning, and Andrew Y
+Ng. 2010. Learning continuous phrase representations
+and syntactic parsing with recursive neural networks.
+In Proceedings of the NIPS-2010 Deep Learning
+and Unsupervised Feature Learning Workshop
+DNN:
+ http://www.aclweb.org/anthology/C14-1220
+Improvement:
+ http://arxiv.org/pdf/1307.7973v1.pdf
+ Domain adaptation:
+ http://www.cs.nyu.edu/~thien/pubs/acl14.pdf
+Teaching Machines to read:
+- http://arxiv.org/pdf/1506.03340v1.pdf
+
+\bibliography{proposal} 
+\bibliographystyle{ieeetr}
+
+\end{document}
